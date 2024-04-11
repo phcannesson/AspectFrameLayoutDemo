@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.phcannesson.aspectframelayoutdemo.ui.HomeScreen
+import com.phcannesson.aspectframelayoutdemo.ui.PlayerFixTextureViewScreen
 import com.phcannesson.aspectframelayoutdemo.ui.PlayerKOScreen
 import com.phcannesson.aspectframelayoutdemo.ui.theme.AspectFrameLayoutDemoTheme
 
@@ -30,11 +31,20 @@ class MainActivity : ComponentActivity() {
                                 navController.navigate("player-bug") {
                                     popUpTo("home")
                                 }
+                            },
+                            onClickFixTextureView = {
+                                navController.navigate("player-ok-texture-view") {
+                                    popUpTo("home")
+                                }
                             })
                     }
 
                     composable("player-bug") {
                         PlayerKOScreen()
+                    }
+
+                    composable("player-ok-texture-view") {
+                        PlayerFixTextureViewScreen()
                     }
                 }
             }

@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun HomeScreen(
     onClickBug: () -> Unit,
+    onClickFixTextureView: () -> Unit,
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -20,6 +21,10 @@ fun HomeScreen(
     ) {
         Button(onClick = onClickBug) {
             Text(text = "Player with issue")
+        }
+
+        Button(onClick = onClickFixTextureView) {
+            Text(text = "Player OK with texture view")
         }
     }
 }
